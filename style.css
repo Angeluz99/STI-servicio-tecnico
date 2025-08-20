@@ -242,7 +242,6 @@ nav span img {
   position: relative;
     overflow: hidden;
 
-  padding: 2rem;
   background-color: #fff;
   color: #333;
   font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
@@ -258,9 +257,10 @@ nav span img {
 }
 
 .services-grid {
+    padding: 2vw 10vw;
+
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
 }
 
 .service {
@@ -303,14 +303,14 @@ padding-inline: 2vw;
 .brand-strip {
   position: absolute;
   top: 0;
-  width: 15vw;             /* thin enough to not cover content */
+  width: 14vw;             /* thin enough to not cover content */
   height: 100%;
   overflow: hidden;
   z-index: 1;
 }
 
-.left-strip { left: -9vw; }
-.right-strip { right: -9vw; }
+.left-strip { left: 0vw; }
+.right-strip { right: 0vw; }
 
 /* Track moves vertically */
 .brand-track {
@@ -326,8 +326,8 @@ padding-inline: 2vw;
 
 .brand-strip img {
   width: 13vw; 
-  height: 13.1vw;     /* small logos */
-  margin: 25vw 0;
+  height: 13vw;     /* small logos */
+  margin: 29vw 0;
   opacity: 0.9;
 }
 
