@@ -7,7 +7,6 @@
 body {
   background-color: rgba(243, 155, 32);
   padding: 0;
-
 }
 
 a {
@@ -23,10 +22,10 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-font-family: 'quicksand';  
-color: white;
+  font-family: "quicksand";
+  color: white;
   height: 10vw;
-background-color:rgba(243, 155, 32, 0.868);
+  background-color: rgba(243, 155, 32, 0.868);
   z-index: 100; /* Ensure it stays above other content */
 }
 
@@ -97,7 +96,6 @@ nav span img {
   font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
   z-index: 7;
 }
-
 
 @keyframes blink {
   0%,
@@ -235,12 +233,12 @@ nav span img {
   font-size: 1.1rem;
   line-height: 1.4;
   margin-top: 1vw;
-  border-left: solid .5vw #ffd400;
+  border-left: solid 0.5vw #ffd400;
   padding-inline: 2vw;
 }
 .services {
   position: relative;
-    overflow: hidden;
+  overflow: hidden;
 
   background-color: #fff;
   color: #333;
@@ -260,7 +258,7 @@ nav span img {
 }
 
 .services-grid {
-    padding: 2vw 10vw;
+  padding: 2vw 10vw;
 
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -282,11 +280,9 @@ nav span img {
   font-size: 1rem;
   line-height: 1.4;
   margin-top: 1vw;
-  border-left: solid .5vw #ffd400;
-border-right: solid .5vw #ffd400;
-padding-inline: 2vw;
-
-
+  border-left: solid 0.5vw #ffd400;
+  border-right: solid 0.5vw #ffd400;
+  padding-inline: 2vw;
 }
 .service img {
   width: 100%;
@@ -306,14 +302,18 @@ padding-inline: 2vw;
 .brand-strip {
   position: absolute;
   top: 0;
-  width: 14vw;             /* thin enough to not cover content */
+  width: 14vw; /* thin enough to not cover content */
   height: 100%;
   overflow: hidden;
   z-index: 1;
 }
 
-.left-strip { left: 0vw; }
-.right-strip { right: 0vw; }
+.left-strip {
+  left: 0vw;
+}
+.right-strip {
+  right: 0vw;
+}
 
 /* Track moves vertically */
 .brand-track {
@@ -328,21 +328,29 @@ padding-inline: 2vw;
 }
 
 .brand-strip img {
-  width: 13vw; 
-  height: 13vw;     /* small logos */
+  width: 13vw;
+  height: 13vw; /* small logos */
   margin: 29vw 0;
   opacity: 0.9;
 }
 
 /* Animations */
 @keyframes scrollUp {
-  0%   { transform: translateY(130%); }
-  100% { transform: translateY(-100%); }
+  0% {
+    transform: translateY(130%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
 }
 
 @keyframes scrollDown {
-  0%   { transform: translateY(-100%); }
-  100% { transform: translateY(100%); }
+  0% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(100%);
+  }
 }
 
 .banner {
@@ -369,21 +377,21 @@ padding-inline: 2vw;
 
 .banner-logo {
   position: absolute;
-  top: 50%;         /* center vertically */
-  left: 50%;        /* center horizontally */
+  top: 50%; /* center vertically */
+  left: 50%; /* center horizontally */
   transform: translate(-50%, -50%);
-  z-index: 1;       /* above the video */
+  z-index: 1; /* above the video */
   text-align: center;
 }
 
 .banner-logo img {
-  width: 40vw;      /* adjust size for responsiveness */
+  width: 40vw; /* adjust size for responsiveness */
   max-width: 250px; /* prevent it from being too large */
 }
 .contact {
   padding: 2rem;
   background-color: #f0f0f0;
-    background-color: rgb(49, 49, 49);
+  background-color: rgb(49, 49, 49);
 
   color: white;
   font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
@@ -398,26 +406,26 @@ padding-inline: 2vw;
   color: #ffd400;
 }
 
-.contactForm{
+.contactForm {
   background-color: rgb(49, 49, 49);
   padding: 2rem 0;
 }
 .contactForm form {
-  border-left: solid .5vw #ffd400;
-  border-right: solid .5vw #ffd400;
-  border-bottom: double .5vw #ffd400;
+  border-left: solid 0.5vw #ffd400;
+  border-right: solid 0.5vw #ffd400;
+  border-bottom: double 0.5vw #ffd400;
   padding: 10vw 5vw;
   display: flex;
   flex-direction: column;
-  align-items: center;    /* center horizontally */
-  justify-content: center;/* center vertically if you give the parent height */
+  align-items: center; /* center horizontally */
+  justify-content: center; /* center vertically if you give the parent height */
   width: 80%;
-  max-width: 500px;       /* keep form narrow on large screens */
-  margin: 0 auto;         /* center the form itself */
+  max-width: 500px; /* keep form narrow on large screens */
+  margin: 0 auto; /* center the form itself */
 }
 
 .contactForm label {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   align-self: flex-start; /* keep labels aligned left inside the centered form */
   margin-left: 5px;
   margin-bottom: 0.3rem;
@@ -427,12 +435,12 @@ padding-inline: 2vw;
 .contactForm input,
 .contactForm select,
 .contactForm textarea {
-  width: 100%;    
-  height: 8vw;        /* all fields same width */
-  margin-bottom: 1rem;    /* space between elements */
+  width: 100%;
+  height: 8vw; /* all fields same width */
+  margin-bottom: 1rem; /* space between elements */
 }
 
-.contactForm button{
+.contactForm button {
   background-color: rgb(243, 155, 32);
   color: black;
   border: none;
@@ -442,7 +450,6 @@ padding-inline: 2vw;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
 
 .contact h2 {
   text-align: center;
@@ -460,7 +467,7 @@ footer {
 }
 
 footer span {
- font-family: monospace;
+  font-family: monospace;
   font-size: 0.9rem;
 }
 footer img {
