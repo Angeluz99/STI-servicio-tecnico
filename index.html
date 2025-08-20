@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Quicksand:wght@300..700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+    <title>STI</title>
+  </head>
+  <body>
+    <nav>
+      <span> <img src="images/logom.png " alt="logo" /></span>
+      <a href="#about">Nosotros</a>
+      <a href="#services">Servicios</a>
+      <a href="#contact">Contacto</a>
+    </nav>
+    <section class="hero">
+      <!-- Global expanding circle that covers the entire hero -->
+      <div class="circle-behind"></div>
+
+      <!-- TOP (will be above on mobile) -->
+      <div class="hero-col left">
+        <img src="images/electrica-left.png" class="hero-img active" />
+        <img src="images/electrico-left.png" class="hero-img" />
+        <img src="images/mecanica-left.png" class="hero-img" />
+      </div>
+
+      <!-- MIDDLE (full width on mobile) -->
+      <div class="hero-col center">
+        <div class="circle"></div>
+        <h1 class="logo">STI</h1>
+        <div class="dot"></div>
+        <p>Servicios Tecnicos Industriales</p>
+      </div>
+
+      <!-- BOTTOM (will be below on mobile) -->
+      <div class="hero-col right">
+        <img src="images/electrica-right.png" class="hero-img active" />
+        <img src="images/electrico-right.png" class="hero-img" />
+        <img src="images/mecanica-right.png" class="hero-img" />
+      </div>
+      <div class="hero-dynamic-text"></div>
+    </section>
+
+    <main>
+      <!-- Who we are -->
+      <section class="about" id="about">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          <strong>STI</strong> es una empresa especializada en soluciones
+          industriales que ofrece una amplia gama de productos para la
+          <strong
+            >automatización, control, transmisión mecánica, protección
+            eléctrica, neumática, compresoresy más.</strong
+          >
+          Somos reconocidos por nuestra
+          <strong>honestadidad, compromiso y experiencia</strong> en el sector.
+          Nos adaptamos a las necesidades de cada cliente.
+        </p>
+      </section>
+
+      <!-- Services / Products -->
+      <section id="services" class="services">
+        <h2>Nuestros Servicios y Productos</h2>
+        <div class="services-wrapper">
+          <!-- Left strip -->
+          <div class="brand-strip left-strip">
+            <div class="brand-track">
+              <img src="images/brands/abb-logo.png" alt="Brand 1" />
+              <img src="images/brands/allen-bradley-logo.png" alt="Brand 2" />
+              <img src="images/brands/delta-electronics-logo.png" alt="Brand 3" />
+              <img src="images/brands/eaton-logo.png" alt="Brand 4" />
+              <img src="images/brands/fanuc-logo.png" alt="Brand 5" />
+              <img src="images/brands/honeywell-logo.png" alt="Brand 6" />
+              <img src="images/brands/omron-logo.png" alt="Brand 7" />
+              <img src="images/brands/schneider-electric-logo.png" alt="Brand 8" />
+              <img src="images/brands/schneider-electric-logo.png" alt="Brand 9" />
+              <img src="images/brands/siemens-logo.png" alt="Brand 10" />
+            </div>
+          </div>
+          <div class="services-grid">
+            <article class="service">
+              <h3>Automatización</h3>
+              <p>
+                PLC, HMI, variadores de frecuencia y controladores industriales.
+              </p>
+              <img
+                src="images/automatizacion.png"
+                alt="Automatización industrial"
+              />
+            </article>
+
+            <article class="service">
+              <h3>Componentes eléctricos</h3>
+              <p>Contactores, guardamotores, botoneras, clemas y más.</p>
+              <img src="images/electricos.png" alt="Componentes eléctricos" />
+            </article>
+
+            <article class="service">
+              <h3>Motores y motoreductores</h3>
+              <p>
+                Motores eléctricos y motoreductores para aplicaciones de alta
+                exigencia.
+              </p>
+              <img src="images/motores.png" alt="Motores industriales" />
+            </article>
+
+            <article class="service">
+              <h3>Transmisión mecánica</h3>
+              <p>Bandas, cadenas, chumaceras y catarinas para maquinaria.</p>
+              <img src="images/transmision.png" alt="Transmisión mecánica" />
+            </article>
+
+            <article class="service">
+              <h3>Protección eléctrica</h3>
+              <p>
+                Arrancadores, transformadores, fusibles y dispositivos de
+                protección.
+              </p>
+              <img src="images/panel.png" alt="Protección eléctrica" />
+            </article>
+
+            <article class="service">
+              <h3>Material eléctrico y ferretería</h3>
+              <p>Cables, valeros, herramientas y accesorios industriales.</p>
+              <img
+                src="images/supplies.png"
+                alt="Material eléctrico y ferretería"
+              />
+            </article>
+
+            <article class="service">
+              <h3>Compresores</h3>
+              <p>
+                Compresores industriales y accesorios para diversas
+                aplicaciones.
+              </p>
+              <img src="images/compresor.png" alt="Compresores industriales" />
+            </article>
+
+            <article class="service">
+              <h3>Refacciones para caldera</h3>
+              <p>Quemadores, válvulas, controles y juntas.</p>
+              <img src="images/boiler.png" alt="Refacciones para caldera" />
+            </article>
+
+            <article class="service">
+              <h3>Refacciones neumáticas</h3>
+              <p>Cilindros, válvulas, mangueras, conexiones y filtros.</p>
+              <img src="images/neumaticos.png" alt="Refacciones neumáticas" />
+            </article>
+          </div>
+          <div class="brand-strip right-strip">
+               <div class="brand-track">
+              <img src="images/brands/abb-logo.png" alt="Brand 1" />
+              <img src="images/brands/allen-bradley-logo.png" alt="Brand 2" />
+              <img src="images/brands/delta-electronics-logo.png" alt="Brand 3" />
+              <img src="images/brands/eaton-logo.png" alt="Brand 4" />
+              <img src="images/brands/fanuc-logo.png" alt="Brand 5" />
+              <img src="images/brands/honeywell-logo.png" alt="Brand 6" />
+              <img src="images/brands/omron-logo.png" alt="Brand 7" />
+              <img src="images/brands/schneider-electric-logo.png" alt="Brand 8" />
+              <img src="images/brands/schneider-electric-logo.png" alt="Brand 9" />
+              <img src="images/brands/siemens-logo.png" alt="Brand 10" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="banner">
+        <video
+          src="images/480banner.mp4"
+          loop
+          autoplay
+          muted
+          playsinline
+        ></video>
+        <div class="banner-logo">
+          <img src="images/logom.png" alt="STI logo" />
+        </div>
+      </section>
+
+      <!-- Contact -->
+
+      <section class="contactForm">
+        <h2>Escríbenos para cotizaciones</h2>
+        <form id="form" action="https://api.web3forms.com/submit" method="POST">
+          <input
+            type="hidden"
+            name="access_key"
+            value="70f70116-d3bb-4f1e-a43c-3e5c36a51426"
+          />
+          <label for="name">Nombre:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+          <label for="subject">Asunto:</label>
+          <select name="subject" required>
+            <option
+              value="Mensaje desde el website: Información sobre Refacciones"
+            >
+              Consulta General
+            </option>
+            <option
+              value="Mensaje desde el website: Información sobre Servicios"
+            >
+              Información sobre Servicios
+            </option>
+          </select>
+          <label for="message">Mensaje:</label>
+          <textarea id="message" name="message" rows="4" required></textarea>
+          <input
+            type="checkbox"
+            name="botcheck"
+            class="hidden"
+            style="display: none"
+          />
+          <input
+            type="hidden"
+            name="redirect"
+            value="https://integradorasi.com/"
+          />
+          <button type="submit">Enviar</button>
+        </form>
+      </section>
+    </main>
+    <section id="contact" class="contact">
+      <h2>Contacto</h2>
+      <p>Tel: <strong>378-111-8286 / 378-100-6013</strong></p>
+      <p>
+        Email:
+        <a href="mailto:info@sti60s.com"><strong>info@sti60s.com</strong></a>
+      </p>
+      <p>Ubicacíon: <strong>Capilla de Guadalupe, Jalisco</strong></p>
+    </section>
+    <footer>
+      <p>
+        2025 &copy; STI Servicios Técnicos Industriales. Todos los derechos
+        reservados.
+      </p>
+      <span
+        >Developed by:
+        <a
+          href="https://angeluz99.github.io/Portfolio/sp.html"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img src="images/portfolio.jpg" alt="portfolio" /> ANGEL WEB D</a
+        ></span
+      >
+    </footer>
+    <a
+      href="https://wa.me/523781009607?text=Hola,%20quiero%20más%20información%20sobre%20sus%20servicios."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener"
+      aria-label="WhatsApp"
+    >
+      <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+  </body>
+</html>

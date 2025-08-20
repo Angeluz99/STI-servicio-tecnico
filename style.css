@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: rgba(243, 155, 32);
+  padding: 0;
+
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* inherit color from parent */
+}
+nav {
+  position: fixed;
+  display: flex;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  align-items: center;
+  justify-content: space-around;
+  top: 0;
+  left: 0;
+  width: 100%;
+font-family: 'quicksand';  
+color: white;
+  height: 10vw;
+background-color:rgba(243, 155, 32, 0.868);
+  z-index: 100; /* Ensure it stays above other content */
+}
+
+nav span img {
+  width: 8vw;
+  height: 8vw;
+}
+
+/* HERO LAYOUT: stacked vertically on mobile */
+.hero {
+  margin-top: 10vw;
+  position: relative;
+  display: flex;
+  flex-direction: column; /* vertical stack */
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: rgb(49, 49, 49);
+}
+/* Each row fills width; we give explicit heights so absolute images have a box */
+.hero-col {
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Top and Bottom image areas */
+.hero-col.left,
+.hero-col.right {
+  height: 34vh; /* tweak as you like */
+}
+
+/* Middle area with STI (full width) */
+.hero-col.center {
+  position: relative;
+  height: 28vw; /* tweak as you like */
+  overflow: hidden; /* clip the inside circle */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
+
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.hero-col.center p {
+  position: absolute;
+  bottom: 0;
+  color: #fff;
+  font-size: 1.5rem;
+  text-align: center;
+  z-index: 6;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  animation: blink 4s ease-in-out infinite;
+}
+
+.hero-dynamic-text {
+  position: absolute;
+  bottom: 10%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.3rem;
+  padding-inline: 2vw;
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+  z-index: 7;
+}
+
+
+@keyframes blink {
+  0%,
+  65%,
+  100% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 1;
+  }
+}
+
+/* Logo */
+.logo {
+  font-size: 3.5rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  color: #111;
+  z-index: 10;
+}
+
+/* FIRST CIRCLE (behind STI, contained) */
+.circle {
+  position: absolute;
+  width: 55vw;
+  height: 55vw;
+  background: #ffd400; /* solid yellow */
+  border-radius: 50%;
+  z-index: 3; /* behind STI text, above background */
+  animation: pulseInside 4s infinite;
+  pointer-events: none;
+}
+
+/* GLOBAL CIRCLE (covers the entire hero, fades out) */
+.circle-behind {
+  position: absolute;
+  left: 58%;
+  top: 40%;
+  width: 40vw;
+  height: 40vw;
+  background: rgb(243, 155, 32);
+
+  border-radius: 50%;
+  transform: translate(-50%, -50%) scale(0.2);
+  z-index: 4; /* under everything */
+  animation: cover 3.8s infinite;
+  pointer-events: none;
+}
+
+.dot {
+  position: absolute;
+  left: 57.25%;
+  top: 10%;
+  width: 5vw;
+  height: 5vw;
+  background-color: rgb(243, 155, 32);
+  border-radius: 50%;
+  z-index: 6;
+  animation: blinkDot 3.8s infinite;
+}
+@keyframes blinkDot {
+  0%,
+  95%,
+  100% {
+    opacity: 1;
+  }
+  30%,
+  80% {
+    opacity: 0;
+  }
+}
+
+/* Slideshow images: overlap inside their row containers */
+.hero-img {
+  position: absolute;
+  inset: 0; /* top:0 right:0 bottom:0 left:0 */
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* or 'cover' if you prefer */
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+  z-index: 0; /* above the circles, below the logo */
+}
+.hero-img.active {
+  opacity: 1;
+}
+
+/* Contained pulsing — does not escape the center box */
+@keyframes pulseInside {
+  0% {
+    transform: scale(0.85);
+  }
+  50% {
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(0.85);
+  }
+}
+
+/* Global cover: grows to fill, then fades quickly to reveal next images */
+@keyframes cover {
+  0% {
+    transform: translate(-50%, -50%) scale(0.2);
+  }
+  45% {
+    transform: translate(-50%, -50%) scale(6);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(9);
+    opacity: 1;
+  }
+  95% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.2);
+    opacity: 0;
+  }
+}
+
+.about {
+  padding: 2rem;
+  background-color: #f0f0f0;
+  color: #333;
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.about h2 {
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-bottom: 5vw;
+}
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.4;
+  margin-top: 1vw;
+  border-left: solid .5vw #ffd400;
+  padding-inline: 2vw;
+}
+.services {
+  position: relative;
+    overflow: hidden;
+
+  padding: 2rem;
+  background-color: #fff;
+  color: #333;
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.services h2 {
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #ffd400;
+  border-radius: 5px;
+  background-color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.service {
+  text-align: center;
+  background-color: #f9f9f9;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.service h3 {
+  color: rgb(243, 155, 32);
+}
+
+.service p {
+  font-size: 1rem;
+  line-height: 1.4;
+  margin-top: 1vw;
+  border-left: solid .5vw #ffd400;
+border-right: solid .5vw #ffd400;
+padding-inline: 2vw;
+
+
+}
+.service img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+/* Wrapper holds grid and strips */
+.services-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+/* Strips */
+.brand-strip {
+  position: absolute;
+  top: 0;
+  width: 15vw;             /* thin enough to not cover content */
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.left-strip { left: -9vw; }
+.right-strip { right: -9vw; }
+
+/* Track moves vertically */
+.brand-track {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  animation: scrollUp 20s linear infinite;
+}
+
+.right-strip .brand-track {
+  animation: scrollDown 20s linear infinite;
+}
+
+.brand-strip img {
+  width: 13vw; 
+  height: 13.1vw;     /* small logos */
+  margin: 25vw 0;
+  opacity: 0.9;
+}
+
+/* Animations */
+@keyframes scrollUp {
+  0%   { transform: translateY(130%); }
+  100% { transform: translateY(-100%); }
+}
+
+@keyframes scrollDown {
+  0%   { transform: translateY(-100%); }
+  100% { transform: translateY(100%); }
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 90vw;
+}
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 90vw; /* adjust for mobile */
+}
+
+.banner video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* keep video behind */
+}
+
+.banner-logo {
+  position: absolute;
+  top: 50%;         /* center vertically */
+  left: 50%;        /* center horizontally */
+  transform: translate(-50%, -50%);
+  z-index: 1;       /* above the video */
+  text-align: center;
+}
+
+.banner-logo img {
+  width: 40vw;      /* adjust size for responsiveness */
+  max-width: 250px; /* prevent it from being too large */
+}
+.contact {
+  padding: 2rem;
+  background-color: #f0f0f0;
+    background-color: rgb(49, 49, 49);
+
+  color: white;
+  font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
+}
+.contactForm h2 {
+  border-radius: 5px;
+  padding-inline: 4vw;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  text-align: center;
+  font-size: 1.2rem;
+  margin: 4vw;
+  color: #ffd400;
+}
+
+.contactForm{
+  background-color: rgb(49, 49, 49);
+  padding: 2rem 0;
+}
+.contactForm form {
+  border-left: solid .5vw #ffd400;
+  border-right: solid .5vw #ffd400;
+  border-bottom: double .5vw #ffd400;
+  padding: 10vw 5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    /* center horizontally */
+  justify-content: center;/* center vertically if you give the parent height */
+  width: 80%;
+  max-width: 500px;       /* keep form narrow on large screens */
+  margin: 0 auto;         /* center the form itself */
+}
+
+.contactForm label {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  align-self: flex-start; /* keep labels aligned left inside the centered form */
+  margin-left: 5px;
+  margin-bottom: 0.3rem;
+  color: white;
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea {
+  width: 100%;    
+  height: 8vw;        /* all fields same width */
+  margin-bottom: 1rem;    /* space between elements */
+}
+
+.contactForm button{
+  background-color: rgb(243, 155, 32);
+  color: black;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+
+.contact h2 {
+  text-align: center;
+  color: #ffd400;
+  margin-bottom: 1rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+footer {
+  background-color: black;
+  width: 100%;
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+footer span {
+ font-family: monospace;
+  font-size: 0.9rem;
+}
+footer img {
+  width: 5vw;
+  height: 5vw;
+  margin-top: 1rem;
+}
+
+.whatsapp-float {
+  position: fixed;
+  bottom: 2vw;
+  right: 2vw;
+  z-index: 2;
+  color: yellow;
+  background-color: rgba(128, 128, 128, 0.744);
+  border-radius: 50%;
+  width: 4.5rem;
+  height: 4.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 2.5rem;
+  transition: background 0.2s, transform 0.2s;
+  text-decoration: none;
+}
+.whatsapp-float:hover {
+  background: #25d366;
+  transform: scale(1.08);
+}
+
+@media (min-width: 900px) {
+  .hero {
+    flex-direction: row;
+  }
+  .hero-col.left,
+  .hero-col.right,
+  .hero-col.center {
+    height: 100vh;
+  }
+}
