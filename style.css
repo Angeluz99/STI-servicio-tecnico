@@ -474,7 +474,7 @@ footer img {
   bottom: 2vw;
   right: 2vw;
   z-index: 2;
-  color: yellow;
+  color: #ffd400;
   background-color: rgba(128, 128, 128, 0.744);
   border-radius: 50%;
   width: 4.5rem;
@@ -484,7 +484,7 @@ footer img {
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
   font-size: 2.5rem;
-  transition: background 0.2s, transform 0.2s;
+  transition: all 0.2s, transform 0.2s;
   text-decoration: none;
 }
 .whatsapp-float:hover {
