@@ -13,6 +13,10 @@ a {
   text-decoration: none;
   color: inherit; /* inherit color from parent */
 }
+
+a:hover {
+  text-decoration: underline;
+}
 nav {
   position: fixed;
   display: flex;
@@ -450,7 +454,10 @@ nav span img {
   cursor: pointer;
   transition: background-color 0.3s ease;
 }
-
+ .contactForm button:hover {
+  background-color: #f3d659;
+  scale: 1.05;
+ }
 .contact h2 {
   text-align: center;
   color: #ffd400;
@@ -499,7 +506,91 @@ footer img {
   transform: scale(1.08);
 }
 
+@media (min-width: 600px) {
+  nav a {
+    font-size: 1.2rem;
+  }
+  .hero-col {
+    margin-inline: auto;
+  }
+
+  .hero-col.center {
+    height: 40vw; /* adjust for larger screens */
+  }
+
+  .hero-col.center h1 {
+    font-size: 5rem;
+  }
+  .hero-col.center p {
+    font-size: 2rem;
+    bottom: 10%;
+  }
+  .dot {
+    width: 3vw;
+    height: 3vw;
+
+    left: 55.5%;
+    top: 30%;
+  }
+
+  .hero-img {
+    position: absolute;
+    inset: 0; /* top:0 right:0 bottom:0 left:0 */
+    width: 60%;
+    height: 60%;
+    margin-inline: 20%;
+    object-fit: contain; /* or 'cover' if you prefer */
+  }
+
+  .contactForm form {
+    width: 60%;
+    max-width: 600px; /* wider on larger screens */
+  }
+  .contactForm input,
+  .contactForm select,
+  .contactForm textarea {
+    height: 6vw; /* adjust for larger screens */
+  }
+  .contactForm button {
+    padding: 0.75rem 2rem;
+    font-size: 1.2rem;
+  }
+
+  .banner-logo img {
+    width: 30vw; /* adjust size for larger screens */
+    max-width: none; /* allow it to scale up */
+  }
+
+  .contact h2 {
+    font-size: 2rem;
+  }
+  .contact p {
+    font-size: 1.2rem;
+  }
+
+  .contactForm h2 {
+    font-size: 1.5rem;
+  }
+}
+
 @media (min-width: 900px) {
+  .hero {
+    margin-top: 6vw;
+  }
+
+  nav {
+    height: 6vw;
+  }
+
+  nav span img {
+    width: 8vw;
+    height: 5vw;
+  }
+
+  nav a {
+    font-size: 1.5rem;
+  }
+
   .hero {
     flex-direction: row;
   }
@@ -507,5 +598,128 @@ footer img {
   .hero-col.right,
   .hero-col.center {
     height: 100vh;
+  }
+
+  .dot {
+    width: 2vw;
+    height: 2vw;
+    left: 59%;
+    top: 40%;
+  }
+
+  .circle-behind {
+    left: 50%;
+    top: 50%;
+    width: 20vw;
+    height: 20vw;
+  }
+
+  .hero-col.center p {
+    font-size: 2rem;
+    bottom: 35%;
+  }
+
+  .circle {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .hero-img img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .hero-dynamic-text {
+    font-size: 1.5rem;
+    top: 15%;
+  }
+
+  .about {
+    padding: 2vw 10vw;
+  }
+
+  .about h2 {
+    font-size: 2rem;
+  }
+
+  .about p {
+    font-size: 1.2rem;
+  }
+  .services {
+    padding: 2vw 10vw;
+  }
+
+  .services h2 {
+    font-size: 2rem;
+    padding: 1vw 0;
+  }
+
+  .brand-strip {
+    width: 10vw;
+  }
+  .right-strip .brand-track {
+    animation: scrollDown 30s linear infinite;
+  }
+  .left-strip .brand-track {
+    animation: scrollUp 30s linear infinite;
+  }
+
+  .brand-strip img {
+    width: 11vw;
+    height: 8vw; /* small logos */
+    margin: 9vw 0;
+    opacity: 0.9;
+  }
+
+  .banner {
+    height: 35vw; /* adjust for larger screens */
+  }
+
+  .banner video {
+    height: 35vw;
+    width: 60%;
+    margin-inline: 20%;
+  }
+
+  .contact {
+    padding: 2vw 10vw;
+    text-align: center;
+  }
+
+  .contact h2 {
+    font-size: 2.1rem;
+    margin: 0;
+  }
+
+  .contact p {
+    font-size: 1.8rem;
+    margin: 1vw 0;
+  }
+.contactForm{
+  margin: 0;
+}
+
+.contactForm form {
+
+  padding: 5vw 2vw;
+}
+  .contactForm h2 {
+    font-size: 2rem;
+  }
+
+  .contactForm input,
+  .contactForm select {
+    height: 3vw; 
+    font-size: 1.5rem;/* adjust for larger screens */
+    border-radius: 5px;
+  }
+
+   .contactForm textarea {
+    height: 8vw; /* adjust for larger screens */
+    font-size: 1.5rem;}
+
+  footer img {
+    width:2vw;
+    height:2vw;
   }
 }
