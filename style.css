@@ -600,6 +600,10 @@ footer img {
     height: 100vh;
   }
 
+   .hero-col.center{
+    width: 120vw;
+   }
+
   .dot {
     width: 2vw;
     height: 2vw;
