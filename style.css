@@ -407,6 +407,34 @@ nav span img {
   color: white;
   font-family: "Quicksand", Tahoma, Geneva, Verdana, sans-serif;
 }
+
+.info {
+  padding: 0;
+  margin: 0;
+}
+
+.info p {
+  font-size: 1rem;
+  margin-top: 2vw;
+  padding-inline: 2vw;
+}
+
+.social {
+  text-align: center;
+  margin-top: 5vw;
+}
+
+
+.social h2 {
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin-bottom: 1vw;
+}
+
+.social p {
+  margin-top: 3vw;
+  font-size: 1.5rem;  color: white;}
+  
 .contactForm h2 {
   border-radius: 5px;
   padding-inline: 4vw;
