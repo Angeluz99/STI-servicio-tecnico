@@ -233,18 +233,17 @@
         </div>
       </section>
 
-      <section class="banner">
-        <video
-          src="images/480banner.mp4"
-          loop
-          autoplay
-          muted
-          playsinline
-        ></video>
-        <div class="banner-logo">
-          <img src="images/logom.png" alt="STI logo" />
-        </div>
-      </section>
+ <section class="banner">
+  <video loop autoplay muted playsinline>
+    <source src="images/bannerVideo.mp4" type="video/mp4" media="(min-width: 900px)">
+    <source src="images/480banner.mp4" type="video/mp4">
+    <!-- Fallback for browsers that don't support <source> -->
+    Your browser does not support the video tag.
+  </video>
+  <div class="banner-logo">
+    <img src="images/logom.png" alt="STI logo" />
+  </div>
+</section>
 
       <!-- Contact -->
 
