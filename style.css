@@ -760,6 +760,13 @@ footer img {
     height: 8vw; /* adjust for larger screens */
     font-size: 1.5rem;}
 
+
+    .whatsapp-float{
+      width: 6vw;
+      height: 6vw;
+      font-size: 3rem;
+    }
+
   footer img {
     width:2vw;
     height:2vw;
