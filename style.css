@@ -7,6 +7,7 @@
 body {
   background-color: rgba(243, 155, 32);
   padding: 0;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -504,6 +505,7 @@ footer {
   width: 100%;
   text-align: center;
   padding: 1rem;
+  z-index: 100;
   color: white;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
@@ -520,19 +522,19 @@ footer img {
 
 .whatsapp-float {
   position: fixed;
-  bottom: 2vw;
-  right: 2vw;
+  bottom: 5%;
+  right: 5%;
   z-index: 2;
   color: #ffd400;
   background-color: rgba(128, 128, 128, 0.744);
   border-radius: 50%;
-  width: 4.5rem;
-  height: 4.5rem;
+  width: 9vw;
+  height: 9vw;
   display: flex;
   align-items: center;
   justify-content: center;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
-  font-size: 2.5rem;
+  font-size: 2rem;
   transition: all 0.2s, transform 0.2s;
   text-decoration: none;
 }
